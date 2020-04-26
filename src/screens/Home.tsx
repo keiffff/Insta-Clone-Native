@@ -1,12 +1,16 @@
 import React, { useCallback, useState } from 'react';
 import { Button, StyleSheet, Text, View } from 'react-native';
 import { useAuth0 } from '../providers/Auth0';
+import { auth0Config } from '../constants/config';
 
 export const Home = () => {
   const auth0Client = useAuth0();
   const [token, setToken] = useState('');
   const handleLogin = useCallback(async () => {
-    const { accessToken } = await auth0Client.webAuth.authorize({ scope: 'openid profile email' });
+    const { accessToken } = await auth0Client.webAuth.authorize({
+      scope: auth0Config.scope,
+      audience: auth0Config.audience,
+    });
     setToken(accessToken);
   }, [auth0Client.webAuth]);
   const handleLogout = useCallback(async () => {

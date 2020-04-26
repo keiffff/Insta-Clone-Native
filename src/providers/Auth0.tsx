@@ -13,7 +13,7 @@ export function useAuth0() {
 }
 
 export const Auth0Provider = ({ children }: Props) => {
-  const auth0Client = new Auth0(auth0Config);
+  const auth0Client = new Auth0({ domain: auth0Config.domain, clientId: auth0Config.clientId });
 
   return <Auth0Context.Provider value={auth0Client}>{children}</Auth0Context.Provider>;
 };
