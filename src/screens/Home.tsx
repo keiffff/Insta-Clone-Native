@@ -1,27 +1,14 @@
-import React, { useCallback, useState } from 'react';
-import { Button, StyleSheet, Text, View } from 'react-native';
-import { useAuth0 } from '../providers/Auth0';
-import { auth0Config } from '../constants/config';
+import React from 'react';
+import { StyleSheet, Text, View } from 'react-native';
+import { useFetchSession } from '../hooks/fetchSession';
 
 export const Home = () => {
-  const auth0Client = useAuth0();
-  const [token, setToken] = useState('');
-  const handleLogin = useCallback(async () => {
-    const { accessToken } = await auth0Client.webAuth.authorize({
-      scope: auth0Config.scope,
-      audience: auth0Config.audience,
-    });
-    setToken(accessToken);
-  }, [auth0Client.webAuth]);
-  const handleLogout = useCallback(async () => {
-    await auth0Client.webAuth.clearSession();
-    setToken('');
-  }, [auth0Client.webAuth]);
+  const token = useFetchSession();
 
   return (
     <View style={styles.container}>
       <Text style={styles.header}> Auth0Sample - Login </Text>
-      <Button onPress={token ? handleLogout : handleLogin} title={token ? 'Log Out' : 'Log In'} />
+      <Text>{token ? 'Log Out' : 'Log In'}</Text>
     </View>
   );
 };
