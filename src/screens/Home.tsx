@@ -1,14 +1,19 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { useFetchSession } from '../hooks/fetchSession';
+import { useAuth0 } from '../providers/Auth0';
+import { useGetUsersInfoQuery } from '../types/hasura';
 
 export const Home = () => {
-  const token = useFetchSession();
+  const currentUser = useAuth0();
+  const { token } = useFetchSession({});
+  const { data } = useGetUsersInfoQuery({ variables: { id: currentUser.sub } });
 
   return (
     <View style={styles.container}>
       <Text style={styles.header}> Auth0Sample - Login </Text>
-      <Text>{token ? 'Log Out' : 'Log In'}</Text>
+      <Text>{token ? 'Authenticated' : 'Unauthenticated'}</Text>
+      <Text>{data && data.users_by_pk?.name}</Text>
     </View>
   );
 };
