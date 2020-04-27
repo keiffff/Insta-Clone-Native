@@ -1,4 +1,5 @@
-import React, { ReactNode, useState, useEffect } from 'react';
+import React, { ReactNode, useState, useEffect, useCallback } from 'react';
+import { ActivityIndicator } from 'react-native';
 import { ApolloProvider as ApolloProviderOrigin } from '@apollo/react-hooks';
 import { ApolloClient } from 'apollo-client';
 import { HttpLink } from 'apollo-link-http';
@@ -7,8 +8,8 @@ import { split } from 'apollo-link';
 import { getMainDefinition } from 'apollo-utilities';
 import { createUploadLink } from 'apollo-upload-client';
 import { InMemoryCache, NormalizedCacheObject } from 'apollo-cache-inmemory';
+import AsyncStorage from '@react-native-community/async-storage';
 import { gqlEndpoints } from '../constants/config';
-import { useFetchSession } from '../hooks/fetchSession';
 
 type Props = {
   children: ReactNode;
@@ -70,18 +71,32 @@ function createLinks(token?: string) {
 
 const inMemoryCache = new InMemoryCache();
 
+function makeApolloClient(token: string) {
+  return new ApolloClient({ link: createLinks(token), cache: inMemoryCache });
+}
+
 export const ApolloProvider = ({ children }: Props) => {
-  const { token, fetchSession } = useFetchSession({ lazy: true });
-  const [client, setClient] = useState<ApolloClient<NormalizedCacheObject> | null>(null);
+  const [client, setClient] = useState((null as unknown) as ApolloClient<NormalizedCacheObject>);
   useEffect(() => {
+    let cleanedUp = false;
     const initApollo = async () => {
-      await fetchSession();
-      const link = createLinks(token);
-      setClient(new ApolloClient({ link, cache: inMemoryCache }));
+      const storageValue = await AsyncStorage.getItem('@token');
+      if (!cleanedUp) {
+        setClient(makeApolloClient(storageValue ?? ''));
+      }
     };
     initApollo();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+
+    return () => {
+      cleanedUp = true;
+    };
   }, []);
 
-  return client ? <ApolloProviderOrigin client={client}>{children}</ApolloProviderOrigin> : null;
+  return client ? (
+    <ApolloProviderOrigin key={`${client}`} client={client}>
+      {children}
+    </ApolloProviderOrigin>
+  ) : (
+    <ActivityIndicator />
+  );
 };

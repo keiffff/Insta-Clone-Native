@@ -31,7 +31,7 @@ module.exports = {
     'no-console': 'warn',
     'import/prefer-default-export': 'off',
     'no-restricted-syntax': 'off',
-    'no-unused-expressions': ['error', {allowShortCircuit: true}],
+    'no-unused-expressions': ['error', { allowShortCircuit: true }],
     'no-underscore-dangle': 'off',
     'no-nested-ternary': 'off',
     // @typescript-eslint
@@ -39,6 +39,12 @@ module.exports = {
     '@typescript-eslint/no-empty-function': 'off',
     '@typescript-eslint/prefer-interface': 'off',
     '@typescript-eslint/no-use-before-define': 'off',
+    '@typescript-eslint/no-unused-expressions': [
+      'error',
+      {
+        allowShortCircuit: true,
+      },
+    ],
     //prettier
     'prettier/prettier': [
       'warn',
