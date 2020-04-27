@@ -12,7 +12,8 @@
     "noUnusedParameters": true,
     "moduleResolution": "node",
     "resolveJsonModule": true,
-    "baseUrl": "./src",
+    "rootDirs": ["src", "stories"],
+    "baseUrl": "src",
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true
   },
