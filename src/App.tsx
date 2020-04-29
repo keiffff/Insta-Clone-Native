@@ -20,6 +20,7 @@ export const App = () => (
               headerTitle: () => <Logo />,
               headerLeft: () => <CameraButton />,
               headerRight: () => <NavButton />,
+              headerTitleAlign: 'center',
             }}
           />
         </Stack.Navigator>
