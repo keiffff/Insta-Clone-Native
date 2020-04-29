@@ -4,6 +4,8 @@ import { useAuth0 } from '../../providers/Auth0';
 import { useGetUsersInfoQuery } from '../../types/hasura';
 
 export { Logo } from './Logo';
+export { NavButton } from './NavButton';
+export { CameraButton } from './CameraButton';
 
 export const Home = () => {
   const currentUser = useAuth0();

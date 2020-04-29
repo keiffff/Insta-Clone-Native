@@ -4,7 +4,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { Auth0Provider } from './providers/Auth0';
 import { ApolloProvider } from './providers/Apollo';
-import { Home, Logo } from './screens/Home';
+import { Home, Logo, NavButton, CameraButton } from './screens/Home';
 
 const Stack = createStackNavigator();
 
@@ -13,7 +13,15 @@ export const App = () => (
     <ApolloProvider>
       <NavigationContainer>
         <Stack.Navigator>
-          <Stack.Screen name="Home" component={Home} options={{ headerTitle: () => <Logo /> }} />
+          <Stack.Screen
+            name="Home"
+            component={Home}
+            options={{
+              headerTitle: () => <Logo />,
+              headerLeft: () => <CameraButton />,
+              headerRight: () => <NavButton />,
+            }}
+          />
         </Stack.Navigator>
       </NavigationContainer>
     </ApolloProvider>
