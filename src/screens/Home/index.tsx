@@ -1,7 +1,9 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import { useAuth0 } from '../providers/Auth0';
-import { useGetUsersInfoQuery } from '../types/hasura';
+import { useAuth0 } from '../../providers/Auth0';
+import { useGetUsersInfoQuery } from '../../types/hasura';
+
+export { Logo } from './Logo';
 
 export const Home = () => {
   const currentUser = useAuth0();
@@ -20,7 +22,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+    backgroundColor: '#FAFAFA',
   },
   header: {
     fontSize: 20,

@@ -72,6 +72,7 @@ module.exports = {
         extensions: ['.jsx', '.tsx'],
       },
     ],
+    'react/display-name': 'off',
     'react/jsx-one-expression-per-line': 'warn',
     'react/no-array-index-key': 'off',
     'react/jsx-wrap-multilines': 'off',

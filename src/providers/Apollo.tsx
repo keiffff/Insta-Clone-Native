@@ -1,4 +1,4 @@
-import React, { ReactNode, useState, useEffect, useCallback } from 'react';
+import React, { ReactNode, useState, useEffect } from 'react';
 import { ActivityIndicator } from 'react-native';
 import { ApolloProvider as ApolloProviderOrigin } from '@apollo/react-hooks';
 import { ApolloClient } from 'apollo-client';
