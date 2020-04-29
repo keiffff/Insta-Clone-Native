@@ -12,7 +12,7 @@ export const App = () => (
   <Auth0Provider>
     <ApolloProvider>
       <NavigationContainer>
-        <Stack.Navigator screenOptions={{ headerShown: false }}>
+        <Stack.Navigator>
           <Stack.Screen name="Home" component={Home} />
         </Stack.Navigator>
       </NavigationContainer>

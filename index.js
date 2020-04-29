@@ -1,6 +1,6 @@
 import { AppRegistry } from 'react-native';
 import { App } from './src/App';
-import { StorybookUIRoot } from './storybook';
+import { Storybook } from './storybook';
 import { name as appName } from './app.json';
 
-AppRegistry.registerComponent(appName, () => StorybookUIRoot);
+AppRegistry.registerComponent(appName, () => (process.env.APP_TYPE === 'app' ? App : Storybook));
