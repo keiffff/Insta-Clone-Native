@@ -5,7 +5,8 @@
   "scripts": {
     "android": "react-native run-android",
     "ios": "react-native run-ios",
-    "start": "react-native start",
+    "start:app": "APP_TYPE=app react-native start",
+    "start:storybook": "APP_TYPE=storybook react-native start",
     "test": "eslint 'src/**/*.{ts,tsx}' --fix",
     "codegen": "graphql-codegen -c codegen.hasura.js"
   },
@@ -62,6 +63,7 @@
     "@typescript-eslint/parser": "^2.27.0",
     "babel-jest": "^24.9.0",
     "babel-loader": "^8.1.0",
+    "babel-plugin-transform-inline-environment-variables": "^0.4.3",
     "eslint": "^6.5.1",
     "eslint-config-airbnb-typescript": "^7.2.1",
     "eslint-config-prettier": "^6.10.1",
