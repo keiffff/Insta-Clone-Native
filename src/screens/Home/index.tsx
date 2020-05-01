@@ -1,7 +1,8 @@
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React, { useMemo } from 'react';
+import { StyleSheet, ScrollView } from 'react-native';
 import { useAuth0 } from '../../providers/Auth0';
-import { useGetUsersInfoQuery } from '../../types/hasura';
+import { PostsList } from '../../components/PostsList';
+import { useNotifyNewPostsSubscription } from '../../types/hasura';
 
 export { Logo } from './Logo';
 export { NavButton } from './NavButton';
@@ -9,26 +10,19 @@ export { CameraButton } from './CameraButton';
 
 export const Home = () => {
   const currentUser = useAuth0();
-  const { data } = useGetUsersInfoQuery({ variables: { id: currentUser.sub } });
+  const { data } = useNotifyNewPostsSubscription({ variables: { userId: currentUser.sub } });
+  const posts = useMemo(() => data?.posts.map(({ id, image, user }) => ({ id, image, user })) ?? [], [data]);
 
   return (
-    <View style={styles.container}>
-      <Text style={styles.header}> Auth0Sample - Login </Text>
-      <Text>{data && data.users_by_pk?.name}</Text>
-    </View>
+    <ScrollView style={styles.base}>
+      <PostsList posts={posts} />
+    </ScrollView>
   );
 };
 
 const styles = StyleSheet.create({
-  container: {
+  base: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
     backgroundColor: '#FAFAFA',
-  },
-  header: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
   },
 });

@@ -77,6 +77,7 @@ const styles = StyleSheet.create({
   itemMenu: {
     flexDirection: 'row',
     alignItems: 'center',
+    backgroundColor: '#FFFFFF',
     padding: 4,
   },
   commentButtonWrapper: {
