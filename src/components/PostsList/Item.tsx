@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, Image, StyleSheet } from 'react-native';
 import Icon from 'react-native-vector-icons/Feather';
-import { circle } from '../../helpers/styles';
+import { circle } from 'helpers/styles';
 
 type Props = {
   id: number;

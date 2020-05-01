@@ -2,7 +2,7 @@ import React, { ReactNode, createContext, useCallback, useContext, useEffect, us
 import { ActivityIndicator } from 'react-native';
 import AsyncStorage from '@react-native-community/async-storage';
 import Auth0 from 'react-native-auth0';
-import { auth0Config } from '../constants/config';
+import { auth0Config } from 'constants/config';
 
 type User = {
   name: string;

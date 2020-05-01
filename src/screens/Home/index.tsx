@@ -1,8 +1,8 @@
 import React, { useMemo } from 'react';
 import { StyleSheet, ScrollView } from 'react-native';
-import { useAuth0 } from '../../providers/Auth0';
-import { PostsList } from '../../components/PostsList';
-import { useNotifyNewPostsSubscription } from '../../types/hasura';
+import { useAuth0 } from 'providers/Auth0';
+import { PostsList } from 'components/PostsList';
+import { useNotifyNewPostsSubscription } from 'types/hasura';
 
 export { Logo } from './Logo';
 export { NavButton } from './NavButton';

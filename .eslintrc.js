@@ -54,16 +54,7 @@ module.exports = {
       },
     ],
     // import
-    'import/extensions': [
-      'error',
-      'always',
-      {
-        js: 'never',
-        jsx: 'never',
-        ts: 'never',
-        tsx: 'never',
-      },
-    ],
+    'import/extensions': 'off',
     'import/no-extraneous-dependencies': 'off',
     // react
     'react/jsx-filename-extension': [

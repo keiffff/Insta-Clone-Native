@@ -9,7 +9,7 @@ import { getMainDefinition } from 'apollo-utilities';
 import { createUploadLink } from 'apollo-upload-client';
 import { InMemoryCache, NormalizedCacheObject } from 'apollo-cache-inmemory';
 import AsyncStorage from '@react-native-community/async-storage';
-import { gqlEndpoints } from '../constants/config';
+import { gqlEndpoints } from 'constants/config';
 
 type Props = {
   children: ReactNode;
