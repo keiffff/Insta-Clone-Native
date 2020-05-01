@@ -3,10 +3,10 @@ import { StyleSheet, ScrollView } from 'react-native';
 import { useAuth0 } from 'providers/Auth0';
 import { PostsList } from 'components/PostsList';
 import { useNotifyNewPostsSubscription } from 'types/hasura';
-
-export { Logo } from './Logo';
-export { NavButton } from './NavButton';
-export { CameraButton } from './CameraButton';
+import { StackHeaderOptions } from '@react-navigation/stack/lib/typescript/src/types';
+import { Logo } from './Logo';
+import { NavButton } from './NavButton';
+import { CameraButton } from './CameraButton';
 
 export const Home = () => {
   const currentUser = useAuth0();
@@ -18,6 +18,13 @@ export const Home = () => {
       <PostsList posts={posts} />
     </ScrollView>
   );
+};
+
+export const HomeOptions: StackHeaderOptions = {
+  headerTitle: () => <Logo />,
+  headerLeft: () => <CameraButton />,
+  headerRight: () => <NavButton />,
+  headerTitleAlign: 'center',
 };
 
 const styles = StyleSheet.create({
