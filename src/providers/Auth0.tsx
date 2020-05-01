@@ -27,13 +27,20 @@ export const Auth0Provider = ({ children }: Props) => {
   const auth0Client = new Auth0({ domain: auth0Config.domain, clientId: auth0Config.clientId });
   const login = useCallback(async () => {
     setLoading(true);
-    const { accessToken } = await auth0Client.webAuth.authorize({
-      scope: auth0Config.scope,
-      audience: auth0Config.audience,
-    });
-    const { name, email, picture, sub } = await auth0Client.auth.userInfo({ token: accessToken });
+    let token = '';
+    const storageValue = await AsyncStorage.getItem('@token');
+    if (!storageValue) {
+      const { accessToken } = await auth0Client.webAuth.authorize({
+        scope: auth0Config.scope,
+        audience: auth0Config.audience,
+      });
+      token = accessToken;
+    } else {
+      token = storageValue;
+    }
+    const { name, email, picture, sub } = await auth0Client.auth.userInfo({ token });
     setUser({ name, email, picture, sub });
-    await AsyncStorage.setItem('@token', accessToken);
+    await AsyncStorage.setItem('@token', token);
     setLoading(false);
   }, [auth0Client.webAuth, auth0Client.auth]);
   useEffect(() => {
