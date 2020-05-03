@@ -1,5 +1,4 @@
 import React, { ReactNode, useState, useEffect } from 'react';
-import { ActivityIndicator } from 'react-native';
 import { ApolloProvider as ApolloProviderOrigin } from '@apollo/react-hooks';
 import { ApolloClient } from 'apollo-client';
 import { HttpLink } from 'apollo-link-http';
@@ -9,6 +8,7 @@ import { getMainDefinition } from 'apollo-utilities';
 import { createUploadLink } from 'apollo-upload-client';
 import { InMemoryCache, NormalizedCacheObject } from 'apollo-cache-inmemory';
 import AsyncStorage from '@react-native-community/async-storage';
+import { LoadingView } from 'components/LoadingView';
 import { gqlEndpoints } from 'constants/config';
 
 type Props = {
@@ -92,11 +92,5 @@ export const ApolloProvider = ({ children }: Props) => {
     };
   }, []);
 
-  return client ? (
-    <ApolloProviderOrigin key={`${client}`} client={client}>
-      {children}
-    </ApolloProviderOrigin>
-  ) : (
-    <ActivityIndicator />
-  );
+  return client ? <ApolloProviderOrigin client={client}>{children}</ApolloProviderOrigin> : <LoadingView />;
 };

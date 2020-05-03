@@ -1,7 +1,7 @@
 import React, { ReactNode, createContext, useCallback, useContext, useEffect, useState } from 'react';
-import { ActivityIndicator } from 'react-native';
 import AsyncStorage from '@react-native-community/async-storage';
 import Auth0 from 'react-native-auth0';
+import { LoadingView } from 'components/LoadingView';
 import { auth0Config } from 'constants/config';
 
 type User = {
@@ -48,5 +48,5 @@ export const Auth0Provider = ({ children }: Props) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  return loading ? <ActivityIndicator /> : <Auth0Context.Provider value={user}>{children}</Auth0Context.Provider>;
+  return loading ? <LoadingView /> : <Auth0Context.Provider value={user}>{children}</Auth0Context.Provider>;
 };

@@ -4,7 +4,7 @@ import { storiesOf } from '@storybook/react-native';
 import { withKnobs } from '@storybook/addon-knobs';
 import { PostsList } from '.';
 
-storiesOf('Example', module)
+storiesOf('PostsList', module)
   .addDecorator(withKnobs)
   .add('default', () => (
     <ScrollView>
