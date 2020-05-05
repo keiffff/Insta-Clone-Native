@@ -19,7 +19,7 @@ type Theme = keyof typeof IconElements;
 
 type Props = {
   theme: Theme;
-  size?: 'small' | 'medium' | 'large';
+  size?: keyof typeof sizeValue;
 } & Omit<IconButtonProps, 'size'>;
 
 const IconElements = {
