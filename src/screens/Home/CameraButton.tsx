@@ -1,4 +1,4 @@
 import React from 'react';
-import Icon from 'react-native-vector-icons/Feather';
+import { IconButton } from 'components/IconButton';
 
-export const CameraButton = () => <Icon.Button name="camera" backgroundColor="transparent" color="#262626" />;
+export const CameraButton = () => <IconButton theme="Feather" name="camera" />;

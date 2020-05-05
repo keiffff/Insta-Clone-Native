@@ -26,6 +26,7 @@ module.exports = {
   rules: {
     // eslint
     'global-require': 'off',
+    'default-case': 'off',
     'consistent-return': 'off',
     'newline-before-return': 'error',
     'no-console': 'warn',
@@ -67,6 +68,7 @@ module.exports = {
     'react/jsx-one-expression-per-line': 'warn',
     'react/no-array-index-key': 'off',
     'react/jsx-wrap-multilines': 'off',
+    'react/jsx-props-no-spreading': 'off',
     // react-hooks
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',

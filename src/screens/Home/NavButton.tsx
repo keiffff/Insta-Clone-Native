@@ -1,4 +1,4 @@
 import React from 'react';
-import Icon from 'react-native-vector-icons/Feather';
+import { IconButton } from 'components/IconButton';
 
-export const NavButton = () => <Icon.Button name="navigation" backgroundColor="transparent" color="#262626" />;
+export const NavButton = () => <IconButton theme="Feather" name="navigation" />;

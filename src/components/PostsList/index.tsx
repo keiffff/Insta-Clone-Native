@@ -6,12 +6,10 @@ type Props = {
   posts: ComponentProps<typeof Item>[];
 };
 
-export const PostsList = ({ posts }: Props) => {
-  return (
-    <FlatList
-      data={posts}
-      keyExtractor={({ id }) => id.toString()}
-      renderItem={({ item }) => <Item id={item.id} image={item.image} user={item.user} />}
-    />
-  );
-};
+export const PostsList = ({ posts }: Props) => (
+  <FlatList
+    data={posts}
+    keyExtractor={({ id }) => id.toString()}
+    renderItem={({ item }) => <Item id={item.id} image={item.image} user={item.user} />}
+  />
+);

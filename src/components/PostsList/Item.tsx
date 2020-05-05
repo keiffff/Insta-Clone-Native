@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Text, Image, StyleSheet } from 'react-native';
-import Icon from 'react-native-vector-icons/Feather';
+import { IconButton } from 'components/IconButton';
 import { circle } from 'helpers/styles';
 
 type Props = {
@@ -25,7 +25,7 @@ export const Item = ({ image, user }: Props) => {
         />
         <Text style={styles.nameLabel}>{user.name}</Text>
         <View style={styles.moreButtonWrapper}>
-          <Icon.Button name="more-horizontal" backgroundColor="transparent" color="#262626" />
+          <IconButton theme="Feather" name="more-horizontal" />
         </View>
       </View>
       <Image
@@ -37,10 +37,10 @@ export const Item = ({ image, user }: Props) => {
       />
       <View style={styles.itemMenu}>
         <View>
-          <Icon.Button size={30} name="heart" backgroundColor="transparent" color="#262626" />
+          <IconButton theme="Feather" name="heart" />
         </View>
         <View style={styles.commentButtonWrapper}>
-          <Icon.Button size={30} name="message-circle" backgroundColor="transparent" color="#262626" />
+          <IconButton theme="Feather" name="message-circle" />
         </View>
       </View>
     </View>
