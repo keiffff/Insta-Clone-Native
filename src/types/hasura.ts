@@ -2159,6 +2159,28 @@ export enum UsersUpdateColumn {
   Name = 'name',
 }
 
+export type InsertLikeMutationVariables = {
+  postId: Scalars['Int'];
+  userId: Scalars['String'];
+};
+
+export type InsertLikeMutation = { __typename?: 'mutation_root' } & {
+  insert_likes?: Maybe<
+    { __typename?: 'likes_mutation_response' } & { returning: Array<{ __typename?: 'likes' } & Pick<Likes, 'id'>> }
+  >;
+};
+
+export type DeleteLikeMutationVariables = {
+  postId: Scalars['Int'];
+  userId: Scalars['String'];
+};
+
+export type DeleteLikeMutation = { __typename?: 'mutation_root' } & {
+  delete_likes?: Maybe<
+    { __typename?: 'likes_mutation_response' } & { returning: Array<{ __typename?: 'likes' } & Pick<Likes, 'id'>> }
+  >;
+};
+
 export type GetProfileInfoQueryVariables = {
   id: Scalars['String'];
 };
@@ -2224,6 +2246,86 @@ export type NotifyNewPostsSubscription = { __typename?: 'subscription_root' } & 
   >;
 };
 
+export const InsertLikeDocument = gql`
+  mutation insertLike($postId: Int!, $userId: String!) {
+    insert_likes(objects: { post_id: $postId, user_id: $userId }) {
+      returning {
+        id
+      }
+    }
+  }
+`;
+export type InsertLikeMutationFn = ApolloReactCommon.MutationFunction<InsertLikeMutation, InsertLikeMutationVariables>;
+
+/**
+ * __useInsertLikeMutation__
+ *
+ * To run a mutation, you first call `useInsertLikeMutation` within a React component and pass it any options that fit your needs.
+ * When your component renders, `useInsertLikeMutation` returns a tuple that includes:
+ * - A mutate function that you can call at any time to execute the mutation
+ * - An object with fields that represent the current status of the mutation's execution
+ *
+ * @param baseOptions options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2;
+ *
+ * @example
+ * const [insertLikeMutation, { data, loading, error }] = useInsertLikeMutation({
+ *   variables: {
+ *      postId: // value for 'postId'
+ *      userId: // value for 'userId'
+ *   },
+ * });
+ */
+export function useInsertLikeMutation(
+  baseOptions?: ApolloReactHooks.MutationHookOptions<InsertLikeMutation, InsertLikeMutationVariables>,
+) {
+  return ApolloReactHooks.useMutation<InsertLikeMutation, InsertLikeMutationVariables>(InsertLikeDocument, baseOptions);
+}
+export type InsertLikeMutationHookResult = ReturnType<typeof useInsertLikeMutation>;
+export type InsertLikeMutationResult = ApolloReactCommon.MutationResult<InsertLikeMutation>;
+export type InsertLikeMutationOptions = ApolloReactCommon.BaseMutationOptions<
+  InsertLikeMutation,
+  InsertLikeMutationVariables
+>;
+export const DeleteLikeDocument = gql`
+  mutation deleteLike($postId: Int!, $userId: String!) {
+    delete_likes(where: { post_id: { _eq: $postId }, user_id: { _eq: $userId } }) {
+      returning {
+        id
+      }
+    }
+  }
+`;
+export type DeleteLikeMutationFn = ApolloReactCommon.MutationFunction<DeleteLikeMutation, DeleteLikeMutationVariables>;
+
+/**
+ * __useDeleteLikeMutation__
+ *
+ * To run a mutation, you first call `useDeleteLikeMutation` within a React component and pass it any options that fit your needs.
+ * When your component renders, `useDeleteLikeMutation` returns a tuple that includes:
+ * - A mutate function that you can call at any time to execute the mutation
+ * - An object with fields that represent the current status of the mutation's execution
+ *
+ * @param baseOptions options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2;
+ *
+ * @example
+ * const [deleteLikeMutation, { data, loading, error }] = useDeleteLikeMutation({
+ *   variables: {
+ *      postId: // value for 'postId'
+ *      userId: // value for 'userId'
+ *   },
+ * });
+ */
+export function useDeleteLikeMutation(
+  baseOptions?: ApolloReactHooks.MutationHookOptions<DeleteLikeMutation, DeleteLikeMutationVariables>,
+) {
+  return ApolloReactHooks.useMutation<DeleteLikeMutation, DeleteLikeMutationVariables>(DeleteLikeDocument, baseOptions);
+}
+export type DeleteLikeMutationHookResult = ReturnType<typeof useDeleteLikeMutation>;
+export type DeleteLikeMutationResult = ApolloReactCommon.MutationResult<DeleteLikeMutation>;
+export type DeleteLikeMutationOptions = ApolloReactCommon.BaseMutationOptions<
+  DeleteLikeMutation,
+  DeleteLikeMutationVariables
+>;
 export const GetProfileInfoDocument = gql`
   query getProfileInfo($id: String!) {
     users(where: { id: { _eq: $id } }) {
