@@ -25,6 +25,7 @@ module.exports = {
   plugins: ['@typescript-eslint', 'import', 'prettier', 'react', 'react-hooks'],
   rules: {
     // eslint
+    'arrow-body-style': ['error', 'as-needed'],
     'global-require': 'off',
     'default-case': 'off',
     'consistent-return': 'off',
@@ -35,6 +36,7 @@ module.exports = {
     'no-unused-expressions': ['error', { allowShortCircuit: true }],
     'no-underscore-dangle': 'off',
     'no-nested-ternary': 'off',
+    'no-console': 'off',
     // @typescript-eslint
     '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/no-empty-function': 'off',

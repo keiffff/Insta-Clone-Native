@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import { View, Text, Image, StyleSheet } from 'react-native';
 import { IconButton } from 'components/IconButton';
 import { circle } from 'helpers/styles';
@@ -13,9 +13,21 @@ type Props = {
   };
   caption: string;
   comments: { id: number; comment: string; user: { name: string } }[];
+  liked?: boolean;
+  onPress: (action: 'like' | 'unlike' | 'comment', postId: number) => void;
 };
 
-export const Item = ({ image, user, caption, comments }: Props) => {
+export const Item = ({ id, image, user, caption, comments, liked = false, onPress }: Props) => {
+  const [like, setLike] = useState(false);
+  const handleToggleLike = useCallback(() => {
+    setLike((v) => !v);
+    onPress(liked ? 'unlike' : 'like', id);
+  }, [onPress, liked, id]);
+  const handlePressComment = useCallback(() => onPress('comment', id), [onPress, id]);
+  useEffect(() => {
+    setLike(liked);
+  }, [liked]);
+
   return (
     <View style={styles.base}>
       <View style={styles.itemHeader}>
@@ -39,10 +51,15 @@ export const Item = ({ image, user, caption, comments }: Props) => {
       />
       <View style={styles.itemMenu}>
         <View>
-          <IconButton theme="Feather" name="heart" />
+          <IconButton
+            theme="FontAwesome"
+            name={like ? 'heart' : 'heart-o'}
+            color={like ? '#DB183d' : undefined}
+            onPress={handleToggleLike}
+          />
         </View>
         <View style={styles.commentButtonWrapper}>
-          <IconButton theme="Feather" name="message-circle" />
+          <IconButton theme="Feather" name="message-circle" onPress={handlePressComment} />
         </View>
       </View>
       <View style={styles.itemFooter}>

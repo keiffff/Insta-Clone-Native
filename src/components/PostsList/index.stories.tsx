@@ -5,7 +5,9 @@ import { PostsList } from '.';
 
 storiesOf('PostsList', module)
   .addDecorator(withKnobs)
-  .add('default', () => <PostsList posts={dummyPosts} />);
+  .add('default', () => (
+    <PostsList posts={dummyPosts} onPress={(action, id) => console.log(`Dispatch ${action} to Post id: ${id}`)} />
+  ));
 
 const dummyPosts = [
   {
@@ -33,6 +35,7 @@ const dummyPosts = [
         },
       },
     ],
+    liked: false,
   },
   {
     id: 2,
@@ -45,6 +48,7 @@ const dummyPosts = [
     caption:
       '喫茶ステラオープンしました。\n当店おすすめのダージリンティーといちごタルトをぜひお楽しみください。みなさまのご来店お待ちしております。',
     comments: [],
+    liked: true,
   },
   {
     id: 3,
@@ -64,5 +68,6 @@ const dummyPosts = [
         },
       },
     ],
+    liked: true,
   },
 ];

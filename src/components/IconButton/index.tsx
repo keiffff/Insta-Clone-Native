@@ -53,9 +53,19 @@ export const IconButton = ({
   size = 'medium',
   color = '#262626',
   backgroundColor = 'transparent',
+  underlayColor = 'transparent',
   ...rest
 }: Props) => {
   const Icon = IconElements[theme];
 
-  return <Icon.Button name={name} size={sizeValue[size]} backgroundColor={backgroundColor} color={color} {...rest} />;
+  return (
+    <Icon.Button
+      name={name}
+      size={sizeValue[size]}
+      backgroundColor={backgroundColor}
+      color={color}
+      underlayColor={underlayColor}
+      {...rest}
+    />
+  );
 };
