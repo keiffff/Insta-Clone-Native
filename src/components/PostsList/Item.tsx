@@ -11,9 +11,11 @@ type Props = {
     avatar: string;
     name: string;
   };
+  caption: string;
+  comments: { id: number; comment: string; user: { name: string } }[];
 };
 
-export const Item = ({ image, user }: Props) => {
+export const Item = ({ image, user, caption, comments }: Props) => {
   return (
     <View style={styles.base}>
       <View style={styles.itemHeader}>
@@ -43,6 +45,25 @@ export const Item = ({ image, user }: Props) => {
           <IconButton theme="Feather" name="message-circle" />
         </View>
       </View>
+      <View style={styles.itemFooter}>
+        <View style={styles.itemFooterRow}>
+          <Text numberOfLines={2}>
+            <Text style={styles.textEmphasis}>{`${user.name} `}</Text>
+            {caption}
+          </Text>
+        </View>
+        {comments.length > 0 ? (
+          <View style={styles.itemFooterRow}>
+            <Text numberOfLines={2}>
+              <Text style={styles.textEmphasis}>{`${comments[0].user.name} `}</Text>
+              {comments[0].comment}
+            </Text>
+          </View>
+        ) : null}
+        {comments.length > 1 ? (
+          <Text style={styles.commentNavigation}>{`コメント${comments.length}件すべてを表示`}</Text>
+        ) : null}
+      </View>
     </View>
   );
 };
@@ -50,14 +71,13 @@ export const Item = ({ image, user }: Props) => {
 const styles = StyleSheet.create({
   base: {
     flexDirection: 'column',
+    backgroundColor: '#FFFFFF',
+    paddingBottom: 8,
   },
   itemHeader: {
     flexDirection: 'row',
     alignItems: 'center',
     padding: 8,
-    backgroundColor: '#FFFFFF',
-    borderColor: '#DBDBDB',
-    borderTopWidth: 1,
   },
   avatar: {
     ...circle(40),
@@ -77,10 +97,24 @@ const styles = StyleSheet.create({
   itemMenu: {
     flexDirection: 'row',
     alignItems: 'center',
-    backgroundColor: '#FFFFFF',
     padding: 4,
   },
   commentButtonWrapper: {
     marginLeft: -16,
+  },
+  itemFooter: {
+    paddingBottom: 8,
+    paddingHorizontal: 8,
+  },
+  itemFooterRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginBottom: 4,
+  },
+  textEmphasis: {
+    fontWeight: 'bold',
+  },
+  commentNavigation: {
+    color: '#999999',
   },
 });
