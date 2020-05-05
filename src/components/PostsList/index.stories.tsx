@@ -1,16 +1,11 @@
 import React from 'react';
-import { ScrollView } from 'react-native';
 import { storiesOf } from '@storybook/react-native';
 import { withKnobs } from '@storybook/addon-knobs';
 import { PostsList } from '.';
 
 storiesOf('PostsList', module)
   .addDecorator(withKnobs)
-  .add('default', () => (
-    <ScrollView>
-      <PostsList posts={dummyPosts} />
-    </ScrollView>
-  ));
+  .add('default', () => <PostsList posts={dummyPosts} />);
 
 const dummyPosts = [
   {

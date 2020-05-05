@@ -1,4 +1,5 @@
 import React, { ComponentProps } from 'react';
+import { FlatList } from 'react-native';
 import { Item } from './Item';
 
 type Props = {
@@ -7,10 +8,10 @@ type Props = {
 
 export const PostsList = ({ posts }: Props) => {
   return (
-    <>
-      {posts.map(({ id, image, user }) => (
-        <Item key={id} id={id} image={image} user={user} />
-      ))}
-    </>
+    <FlatList
+      data={posts}
+      keyExtractor={({ id }) => id.toString()}
+      renderItem={({ item }) => <Item id={item.id} image={item.image} user={item.user} />}
+    />
   );
 };
