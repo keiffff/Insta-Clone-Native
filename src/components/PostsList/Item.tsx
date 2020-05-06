@@ -1,5 +1,5 @@
-import React, { useCallback, useEffect, useState } from 'react';
-import { View, Text, Image, StyleSheet } from 'react-native';
+import React, { useCallback, useEffect, useState, useRef } from 'react';
+import { Animated, View, Text, Image, StyleSheet } from 'react-native';
 import { IconButton } from 'components/IconButton';
 import { circle } from 'helpers/styles';
 
@@ -18,11 +18,16 @@ type Props = {
 };
 
 export const Item = ({ id, image, user, caption, comments, liked = false, onPress }: Props) => {
+  const likeButtonScale = useRef(new Animated.Value(1)).current;
   const [like, setLike] = useState(false);
   const handleToggleLike = useCallback(() => {
+    Animated.sequence([
+      Animated.timing(likeButtonScale, { toValue: 0.8, useNativeDriver: true, duration: 100 }),
+      Animated.timing(likeButtonScale, { toValue: 1, useNativeDriver: true, duration: 100 }),
+    ]).start();
     setLike((v) => !v);
-    onPress(liked ? 'unlike' : 'like', id);
-  }, [onPress, liked, id]);
+    onPress(like ? 'unlike' : 'like', id);
+  }, [onPress, like, id, likeButtonScale]);
   const handlePressComment = useCallback(() => onPress('comment', id), [onPress, id]);
   useEffect(() => {
     setLike(liked);
@@ -50,14 +55,14 @@ export const Item = ({ id, image, user, caption, comments, liked = false, onPres
         resizeMode="cover"
       />
       <View style={styles.itemMenu}>
-        <View>
+        <Animated.View style={{ transform: [{ scale: likeButtonScale }] }}>
           <IconButton
             theme="FontAwesome"
             name={like ? 'heart' : 'heart-o'}
             color={like ? '#DB183d' : undefined}
             onPress={handleToggleLike}
           />
-        </View>
+        </Animated.View>
         <View style={styles.commentButtonWrapper}>
           <IconButton theme="Feather" name="message-circle" onPress={handlePressComment} />
         </View>
