@@ -6,8 +6,10 @@
     "android": "react-native run-android",
     "ios": "react-native run-ios",
     "start:app": "APP_TYPE=app react-native start",
-    "start:storybook": "APP_TYPE=storybook react-native start",
-    "test": "eslint 'src/**/*.{ts,tsx}' --fix",
+    "start:storybook": "yarn prestorybook && APP_TYPE=storybook react-native start",
+    "prestorybook": "rnstl",
+    "test": "jest --colors --forceExit",
+    "lint": "eslint 'src/**/*.{ts,tsx}' --fix",
     "codegen": "graphql-codegen -c codegen.hasura.js"
   },
   "dependencies": {
@@ -50,6 +52,7 @@
     "@storybook/addon-ondevice-actions": "^5.3.18",
     "@storybook/addon-ondevice-knobs": "^5.3.18",
     "@storybook/addon-ondevice-notes": "^5.3.18",
+    "@storybook/addon-storyshots": "^5.3.18",
     "@storybook/addons": "^5.3.18",
     "@storybook/react-native": "^5.3.18",
     "@types/apollo-upload-client": "^8.1.3",
@@ -80,6 +83,8 @@
     "lint-staged": "^10.1.3",
     "metro-react-native-babel-preset": "^0.58.0",
     "prettier": "^2.0.4",
+    "react-dom": "^16.13.1",
+    "react-native-storybook-loader": "^1.8.1",
     "react-test-renderer": "16.11.0",
     "typescript": "^3.8.3"
   },
@@ -93,6 +98,13 @@
       "json",
       "node"
     ]
+  },
+  "config": {
+    "react-native-storybook-loader": {
+      "searchDir": "src",
+      "pattern": "**/*.stories.tsx",
+      "outputFile": "storybook/storyLoader.js"
+    }
   },
   "lint-staged": {
     "*.{ts,tsx}": [

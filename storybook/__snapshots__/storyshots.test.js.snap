@@ -1,0 +1,1370 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots IconButton default 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "flex": 1,
+      "justifyContent": "center",
+    }
+  }
+>
+  <Text
+    style={
+      Object {
+        "fontSize": 24,
+        "fontWeight": "bold",
+      }
+    }
+  >
+    Small
+  </Text>
+  <View
+    accessible={true}
+    focusable={false}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Array [
+        Object {
+          "overflow": "hidden",
+        },
+        Object {
+          "backgroundColor": "transparent",
+          "borderRadius": 5,
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "justifyContent": "flex-start",
+            "padding": 8,
+          },
+          Object {
+            "backgroundColor": "transparent",
+            "borderRadius": 5,
+          },
+          undefined,
+        ]
+      }
+    >
+      <Text
+        allowFontScaling={false}
+        style={
+          Array [
+            Object {
+              "color": "#262626",
+              "fontSize": 12,
+            },
+            Object {
+              "marginRight": 10,
+            },
+            Object {
+              "fontFamily": "anticon",
+              "fontStyle": "normal",
+              "fontWeight": "normal",
+            },
+            Object {},
+          ]
+        }
+      >
+        
+      </Text>
+    </View>
+  </View>
+  <Text
+    style={
+      Object {
+        "fontSize": 24,
+        "fontWeight": "bold",
+      }
+    }
+  >
+    Medium
+  </Text>
+  <View
+    accessible={true}
+    focusable={false}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Array [
+        Object {
+          "overflow": "hidden",
+        },
+        Object {
+          "backgroundColor": "transparent",
+          "borderRadius": 5,
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "justifyContent": "flex-start",
+            "padding": 8,
+          },
+          Object {
+            "backgroundColor": "transparent",
+            "borderRadius": 5,
+          },
+          undefined,
+        ]
+      }
+    >
+      <Text
+        allowFontScaling={false}
+        style={
+          Array [
+            Object {
+              "color": "#262626",
+              "fontSize": 24,
+            },
+            Object {
+              "marginRight": 10,
+            },
+            Object {
+              "fontFamily": "anticon",
+              "fontStyle": "normal",
+              "fontWeight": "normal",
+            },
+            Object {},
+          ]
+        }
+      >
+        
+      </Text>
+    </View>
+  </View>
+  <Text
+    style={
+      Object {
+        "fontSize": 24,
+        "fontWeight": "bold",
+      }
+    }
+  >
+    Large
+  </Text>
+  <View
+    accessible={true}
+    focusable={false}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Array [
+        Object {
+          "overflow": "hidden",
+        },
+        Object {
+          "backgroundColor": "transparent",
+          "borderRadius": 5,
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "justifyContent": "flex-start",
+            "padding": 8,
+          },
+          Object {
+            "backgroundColor": "transparent",
+            "borderRadius": 5,
+          },
+          undefined,
+        ]
+      }
+    >
+      <Text
+        allowFontScaling={false}
+        style={
+          Array [
+            Object {
+              "color": "#262626",
+              "fontSize": 36,
+            },
+            Object {
+              "marginRight": 10,
+            },
+            Object {
+              "fontFamily": "anticon",
+              "fontStyle": "normal",
+              "fontWeight": "normal",
+            },
+            Object {},
+          ]
+        }
+      >
+        
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Storyshots LoadingView large 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "flex": 1,
+      "justifyContent": "center",
+    }
+  }
+>
+  <ActivityIndicator
+    animating={true}
+    color="#999999"
+    hidesWhenStopped={true}
+    size="large"
+  />
+</View>
+`;
+
+exports[`Storyshots LoadingView small 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "flex": 1,
+      "justifyContent": "center",
+    }
+  }
+>
+  <ActivityIndicator
+    animating={true}
+    color="#999999"
+    hidesWhenStopped={true}
+    size="small"
+  />
+</View>
+`;
+
+exports[`Storyshots PostsList default 1`] = `
+<RCTScrollView
+  data={
+    Array [
+      Object {
+        "caption": "こないだいったカフェ",
+        "comments": Array [
+          Object {
+            "comment": "よさそう",
+            "id": 1,
+            "user": Object {
+              "name": "!",
+            },
+          },
+          Object {
+            "comment": "よさそう!",
+            "id": 2,
+            "user": Object {
+              "name": "Kei",
+            },
+          },
+        ],
+        "id": 1,
+        "image": "https://storage.googleapis.com/image-processor-app/iOS の画像.jpg",
+        "liked": false,
+        "user": Object {
+          "avatar": "https://storage.googleapis.com/image-processor-app/51147FD4-5199-4073-BF14-88C39812106A.jpeg",
+          "id": "google-oauth2|104723435908719379671",
+          "name": "Kei sub",
+        },
+      },
+      Object {
+        "caption": "喫茶ステラオープンしました。
+当店おすすめのダージリンティーといちごタルトをぜひお楽しみください。みなさまのご来店お待ちしております。",
+        "comments": Array [],
+        "id": 2,
+        "image": "https://storage.googleapis.com/image-processor-app/46C493F4-4703-4A4A-8D7F-60F2B8D37604.jpeg",
+        "liked": true,
+        "user": Object {
+          "avatar": "https://storage.googleapis.com/image-processor-app/46C493F4-4703-4A4A-8D7F-60F2B8D37604.jpeg",
+          "id": "google-oauth2|116031656602944320296",
+          "name": "喫茶ステラ Official",
+        },
+      },
+      Object {
+        "caption": "うおおおおおおおおおおおおおおおおおおおおおおおお",
+        "comments": Array [
+          Object {
+            "comment": "ほんまそれ",
+            "id": 3,
+            "user": Object {
+              "name": "Kei sub",
+            },
+          },
+        ],
+        "id": 3,
+        "image": "https://storage.googleapis.com/image-processor-app/EC0B236A-0498-471F-B03D-F51671A1D136.jpeg",
+        "liked": true,
+        "user": Object {
+          "avatar": "https://storage.googleapis.com/image-processor-app/IMG_1087 (1).JPG",
+          "id": "google-oauth2|116031656602944320296",
+          "name": "Kei",
+        },
+      },
+    ]
+  }
+  disableVirtualization={false}
+  getItem={[Function]}
+  getItemCount={[Function]}
+  horizontal={false}
+  initialNumToRender={10}
+  keyExtractor={[Function]}
+  maxToRenderPerBatch={10}
+  onContentSizeChange={[Function]}
+  onEndReachedThreshold={2}
+  onLayout={[Function]}
+  onMomentumScrollEnd={[Function]}
+  onScroll={[Function]}
+  onScrollBeginDrag={[Function]}
+  onScrollEndDrag={[Function]}
+  removeClippedSubviews={false}
+  renderItem={[Function]}
+  scrollEventThrottle={50}
+  stickyHeaderIndices={Array []}
+  style={
+    Object {
+      "borderColor": "#DBDBDB",
+      "borderTopWidth": 1,
+    }
+  }
+  updateCellsBatchingPeriod={50}
+  viewabilityConfigCallbackPairs={Array []}
+  windowSize={21}
+>
+  <View>
+    <View
+      onLayout={[Function]}
+      style={null}
+    >
+      <View
+        style={
+          Object {
+            "backgroundColor": "#FFFFFF",
+            "flexDirection": "column",
+            "paddingBottom": 8,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "flexDirection": "row",
+              "padding": 8,
+            }
+          }
+        >
+          <Image
+            source={
+              Object {
+                "uri": "https://storage.googleapis.com/image-processor-app/51147FD4-5199-4073-BF14-88C39812106A.jpeg",
+              }
+            }
+            style={
+              Object {
+                "borderRadius": 20,
+                "height": 40,
+                "width": 40,
+              }
+            }
+          />
+          <Text
+            style={
+              Object {
+                "fontWeight": "bold",
+                "marginLeft": 8,
+              }
+            }
+          >
+            Kei sub
+          </Text>
+          <View
+            style={
+              Object {
+                "marginLeft": "auto",
+                "marginRight": -8,
+              }
+            }
+          >
+            <View
+              accessible={true}
+              focusable={false}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Array [
+                  Object {
+                    "overflow": "hidden",
+                  },
+                  Object {
+                    "backgroundColor": "transparent",
+                    "borderRadius": 5,
+                  },
+                ]
+              }
+            >
+              <View
+                style={
+                  Array [
+                    Object {
+                      "alignItems": "center",
+                      "flexDirection": "row",
+                      "justifyContent": "flex-start",
+                      "padding": 8,
+                    },
+                    Object {
+                      "backgroundColor": "transparent",
+                      "borderRadius": 5,
+                    },
+                    undefined,
+                  ]
+                }
+              >
+                <Text
+                  allowFontScaling={false}
+                  style={
+                    Array [
+                      Object {
+                        "color": "#262626",
+                        "fontSize": 24,
+                      },
+                      Object {
+                        "marginRight": 10,
+                      },
+                      Object {
+                        "fontFamily": "Feather",
+                        "fontStyle": "normal",
+                        "fontWeight": "normal",
+                      },
+                      Object {},
+                    ]
+                  }
+                >
+                  
+                </Text>
+              </View>
+            </View>
+          </View>
+        </View>
+        <Image
+          resizeMode="cover"
+          source={
+            Object {
+              "uri": "https://storage.googleapis.com/image-processor-app/iOS の画像.jpg",
+            }
+          }
+          style={
+            Object {
+              "height": 400,
+              "width": "100%",
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "flexDirection": "row",
+              "padding": 4,
+            }
+          }
+        >
+          <View>
+            <View
+              accessible={true}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Array [
+                  Object {
+                    "overflow": "hidden",
+                  },
+                  Object {
+                    "backgroundColor": "transparent",
+                    "borderRadius": 5,
+                  },
+                ]
+              }
+            >
+              <View
+                style={
+                  Array [
+                    Object {
+                      "alignItems": "center",
+                      "flexDirection": "row",
+                      "justifyContent": "flex-start",
+                      "padding": 8,
+                    },
+                    Object {
+                      "backgroundColor": "transparent",
+                      "borderRadius": 5,
+                    },
+                    undefined,
+                  ]
+                }
+              >
+                <Text
+                  allowFontScaling={false}
+                  style={
+                    Array [
+                      Object {
+                        "color": "#262626",
+                        "fontSize": 24,
+                      },
+                      Object {
+                        "marginRight": 10,
+                      },
+                      Object {
+                        "fontFamily": "FontAwesome",
+                        "fontStyle": "normal",
+                        "fontWeight": "normal",
+                      },
+                      Object {},
+                    ]
+                  }
+                >
+                  
+                </Text>
+              </View>
+            </View>
+          </View>
+          <View
+            style={
+              Object {
+                "marginLeft": -16,
+              }
+            }
+          >
+            <View
+              accessible={true}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Array [
+                  Object {
+                    "overflow": "hidden",
+                  },
+                  Object {
+                    "backgroundColor": "transparent",
+                    "borderRadius": 5,
+                  },
+                ]
+              }
+            >
+              <View
+                style={
+                  Array [
+                    Object {
+                      "alignItems": "center",
+                      "flexDirection": "row",
+                      "justifyContent": "flex-start",
+                      "padding": 8,
+                    },
+                    Object {
+                      "backgroundColor": "transparent",
+                      "borderRadius": 5,
+                    },
+                    undefined,
+                  ]
+                }
+              >
+                <Text
+                  allowFontScaling={false}
+                  style={
+                    Array [
+                      Object {
+                        "color": "#262626",
+                        "fontSize": 24,
+                      },
+                      Object {
+                        "marginRight": 10,
+                      },
+                      Object {
+                        "fontFamily": "Feather",
+                        "fontStyle": "normal",
+                        "fontWeight": "normal",
+                      },
+                      Object {},
+                    ]
+                  }
+                >
+                  
+                </Text>
+              </View>
+            </View>
+          </View>
+        </View>
+        <View
+          style={
+            Object {
+              "paddingBottom": 8,
+              "paddingHorizontal": 8,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "flexDirection": "row",
+                "marginBottom": 4,
+              }
+            }
+          >
+            <Text
+              numberOfLines={2}
+            >
+              <Text
+                style={
+                  Object {
+                    "fontWeight": "bold",
+                  }
+                }
+              >
+                Kei sub 
+              </Text>
+              こないだいったカフェ
+            </Text>
+          </View>
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "flexDirection": "row",
+                "marginBottom": 4,
+              }
+            }
+          >
+            <Text
+              numberOfLines={2}
+            >
+              <Text
+                style={
+                  Object {
+                    "fontWeight": "bold",
+                  }
+                }
+              >
+                ! 
+              </Text>
+              よさそう
+            </Text>
+          </View>
+          <Text
+            style={
+              Object {
+                "color": "#999999",
+              }
+            }
+          >
+            コメント2件すべてを表示
+          </Text>
+        </View>
+      </View>
+    </View>
+    <View
+      onLayout={[Function]}
+      style={null}
+    >
+      <View
+        style={
+          Object {
+            "backgroundColor": "#FFFFFF",
+            "flexDirection": "column",
+            "paddingBottom": 8,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "flexDirection": "row",
+              "padding": 8,
+            }
+          }
+        >
+          <Image
+            source={
+              Object {
+                "uri": "https://storage.googleapis.com/image-processor-app/46C493F4-4703-4A4A-8D7F-60F2B8D37604.jpeg",
+              }
+            }
+            style={
+              Object {
+                "borderRadius": 20,
+                "height": 40,
+                "width": 40,
+              }
+            }
+          />
+          <Text
+            style={
+              Object {
+                "fontWeight": "bold",
+                "marginLeft": 8,
+              }
+            }
+          >
+            喫茶ステラ Official
+          </Text>
+          <View
+            style={
+              Object {
+                "marginLeft": "auto",
+                "marginRight": -8,
+              }
+            }
+          >
+            <View
+              accessible={true}
+              focusable={false}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Array [
+                  Object {
+                    "overflow": "hidden",
+                  },
+                  Object {
+                    "backgroundColor": "transparent",
+                    "borderRadius": 5,
+                  },
+                ]
+              }
+            >
+              <View
+                style={
+                  Array [
+                    Object {
+                      "alignItems": "center",
+                      "flexDirection": "row",
+                      "justifyContent": "flex-start",
+                      "padding": 8,
+                    },
+                    Object {
+                      "backgroundColor": "transparent",
+                      "borderRadius": 5,
+                    },
+                    undefined,
+                  ]
+                }
+              >
+                <Text
+                  allowFontScaling={false}
+                  style={
+                    Array [
+                      Object {
+                        "color": "#262626",
+                        "fontSize": 24,
+                      },
+                      Object {
+                        "marginRight": 10,
+                      },
+                      Object {
+                        "fontFamily": "Feather",
+                        "fontStyle": "normal",
+                        "fontWeight": "normal",
+                      },
+                      Object {},
+                    ]
+                  }
+                >
+                  
+                </Text>
+              </View>
+            </View>
+          </View>
+        </View>
+        <Image
+          resizeMode="cover"
+          source={
+            Object {
+              "uri": "https://storage.googleapis.com/image-processor-app/46C493F4-4703-4A4A-8D7F-60F2B8D37604.jpeg",
+            }
+          }
+          style={
+            Object {
+              "height": 400,
+              "width": "100%",
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "flexDirection": "row",
+              "padding": 4,
+            }
+          }
+        >
+          <View>
+            <View
+              accessible={true}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Array [
+                  Object {
+                    "overflow": "hidden",
+                  },
+                  Object {
+                    "backgroundColor": "transparent",
+                    "borderRadius": 5,
+                  },
+                ]
+              }
+            >
+              <View
+                style={
+                  Array [
+                    Object {
+                      "alignItems": "center",
+                      "flexDirection": "row",
+                      "justifyContent": "flex-start",
+                      "padding": 8,
+                    },
+                    Object {
+                      "backgroundColor": "transparent",
+                      "borderRadius": 5,
+                    },
+                    undefined,
+                  ]
+                }
+              >
+                <Text
+                  allowFontScaling={false}
+                  style={
+                    Array [
+                      Object {
+                        "color": "#262626",
+                        "fontSize": 24,
+                      },
+                      Object {
+                        "marginRight": 10,
+                      },
+                      Object {
+                        "fontFamily": "FontAwesome",
+                        "fontStyle": "normal",
+                        "fontWeight": "normal",
+                      },
+                      Object {},
+                    ]
+                  }
+                >
+                  
+                </Text>
+              </View>
+            </View>
+          </View>
+          <View
+            style={
+              Object {
+                "marginLeft": -16,
+              }
+            }
+          >
+            <View
+              accessible={true}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Array [
+                  Object {
+                    "overflow": "hidden",
+                  },
+                  Object {
+                    "backgroundColor": "transparent",
+                    "borderRadius": 5,
+                  },
+                ]
+              }
+            >
+              <View
+                style={
+                  Array [
+                    Object {
+                      "alignItems": "center",
+                      "flexDirection": "row",
+                      "justifyContent": "flex-start",
+                      "padding": 8,
+                    },
+                    Object {
+                      "backgroundColor": "transparent",
+                      "borderRadius": 5,
+                    },
+                    undefined,
+                  ]
+                }
+              >
+                <Text
+                  allowFontScaling={false}
+                  style={
+                    Array [
+                      Object {
+                        "color": "#262626",
+                        "fontSize": 24,
+                      },
+                      Object {
+                        "marginRight": 10,
+                      },
+                      Object {
+                        "fontFamily": "Feather",
+                        "fontStyle": "normal",
+                        "fontWeight": "normal",
+                      },
+                      Object {},
+                    ]
+                  }
+                >
+                  
+                </Text>
+              </View>
+            </View>
+          </View>
+        </View>
+        <View
+          style={
+            Object {
+              "paddingBottom": 8,
+              "paddingHorizontal": 8,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "flexDirection": "row",
+                "marginBottom": 4,
+              }
+            }
+          >
+            <Text
+              numberOfLines={2}
+            >
+              <Text
+                style={
+                  Object {
+                    "fontWeight": "bold",
+                  }
+                }
+              >
+                喫茶ステラ Official 
+              </Text>
+              喫茶ステラオープンしました。
+当店おすすめのダージリンティーといちごタルトをぜひお楽しみください。みなさまのご来店お待ちしております。
+            </Text>
+          </View>
+        </View>
+      </View>
+    </View>
+    <View
+      onLayout={[Function]}
+      style={null}
+    >
+      <View
+        style={
+          Object {
+            "backgroundColor": "#FFFFFF",
+            "flexDirection": "column",
+            "paddingBottom": 8,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "flexDirection": "row",
+              "padding": 8,
+            }
+          }
+        >
+          <Image
+            source={
+              Object {
+                "uri": "https://storage.googleapis.com/image-processor-app/IMG_1087 (1).JPG",
+              }
+            }
+            style={
+              Object {
+                "borderRadius": 20,
+                "height": 40,
+                "width": 40,
+              }
+            }
+          />
+          <Text
+            style={
+              Object {
+                "fontWeight": "bold",
+                "marginLeft": 8,
+              }
+            }
+          >
+            Kei
+          </Text>
+          <View
+            style={
+              Object {
+                "marginLeft": "auto",
+                "marginRight": -8,
+              }
+            }
+          >
+            <View
+              accessible={true}
+              focusable={false}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Array [
+                  Object {
+                    "overflow": "hidden",
+                  },
+                  Object {
+                    "backgroundColor": "transparent",
+                    "borderRadius": 5,
+                  },
+                ]
+              }
+            >
+              <View
+                style={
+                  Array [
+                    Object {
+                      "alignItems": "center",
+                      "flexDirection": "row",
+                      "justifyContent": "flex-start",
+                      "padding": 8,
+                    },
+                    Object {
+                      "backgroundColor": "transparent",
+                      "borderRadius": 5,
+                    },
+                    undefined,
+                  ]
+                }
+              >
+                <Text
+                  allowFontScaling={false}
+                  style={
+                    Array [
+                      Object {
+                        "color": "#262626",
+                        "fontSize": 24,
+                      },
+                      Object {
+                        "marginRight": 10,
+                      },
+                      Object {
+                        "fontFamily": "Feather",
+                        "fontStyle": "normal",
+                        "fontWeight": "normal",
+                      },
+                      Object {},
+                    ]
+                  }
+                >
+                  
+                </Text>
+              </View>
+            </View>
+          </View>
+        </View>
+        <Image
+          resizeMode="cover"
+          source={
+            Object {
+              "uri": "https://storage.googleapis.com/image-processor-app/EC0B236A-0498-471F-B03D-F51671A1D136.jpeg",
+            }
+          }
+          style={
+            Object {
+              "height": 400,
+              "width": "100%",
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "flexDirection": "row",
+              "padding": 4,
+            }
+          }
+        >
+          <View>
+            <View
+              accessible={true}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Array [
+                  Object {
+                    "overflow": "hidden",
+                  },
+                  Object {
+                    "backgroundColor": "transparent",
+                    "borderRadius": 5,
+                  },
+                ]
+              }
+            >
+              <View
+                style={
+                  Array [
+                    Object {
+                      "alignItems": "center",
+                      "flexDirection": "row",
+                      "justifyContent": "flex-start",
+                      "padding": 8,
+                    },
+                    Object {
+                      "backgroundColor": "transparent",
+                      "borderRadius": 5,
+                    },
+                    undefined,
+                  ]
+                }
+              >
+                <Text
+                  allowFontScaling={false}
+                  style={
+                    Array [
+                      Object {
+                        "color": "#262626",
+                        "fontSize": 24,
+                      },
+                      Object {
+                        "marginRight": 10,
+                      },
+                      Object {
+                        "fontFamily": "FontAwesome",
+                        "fontStyle": "normal",
+                        "fontWeight": "normal",
+                      },
+                      Object {},
+                    ]
+                  }
+                >
+                  
+                </Text>
+              </View>
+            </View>
+          </View>
+          <View
+            style={
+              Object {
+                "marginLeft": -16,
+              }
+            }
+          >
+            <View
+              accessible={true}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Array [
+                  Object {
+                    "overflow": "hidden",
+                  },
+                  Object {
+                    "backgroundColor": "transparent",
+                    "borderRadius": 5,
+                  },
+                ]
+              }
+            >
+              <View
+                style={
+                  Array [
+                    Object {
+                      "alignItems": "center",
+                      "flexDirection": "row",
+                      "justifyContent": "flex-start",
+                      "padding": 8,
+                    },
+                    Object {
+                      "backgroundColor": "transparent",
+                      "borderRadius": 5,
+                    },
+                    undefined,
+                  ]
+                }
+              >
+                <Text
+                  allowFontScaling={false}
+                  style={
+                    Array [
+                      Object {
+                        "color": "#262626",
+                        "fontSize": 24,
+                      },
+                      Object {
+                        "marginRight": 10,
+                      },
+                      Object {
+                        "fontFamily": "Feather",
+                        "fontStyle": "normal",
+                        "fontWeight": "normal",
+                      },
+                      Object {},
+                    ]
+                  }
+                >
+                  
+                </Text>
+              </View>
+            </View>
+          </View>
+        </View>
+        <View
+          style={
+            Object {
+              "paddingBottom": 8,
+              "paddingHorizontal": 8,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "flexDirection": "row",
+                "marginBottom": 4,
+              }
+            }
+          >
+            <Text
+              numberOfLines={2}
+            >
+              <Text
+                style={
+                  Object {
+                    "fontWeight": "bold",
+                  }
+                }
+              >
+                Kei 
+              </Text>
+              うおおおおおおおおおおおおおおおおおおおおおおおお
+            </Text>
+          </View>
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "flexDirection": "row",
+                "marginBottom": 4,
+              }
+            }
+          >
+            <Text
+              numberOfLines={2}
+            >
+              <Text
+                style={
+                  Object {
+                    "fontWeight": "bold",
+                  }
+                }
+              >
+                Kei sub 
+              </Text>
+              ほんまそれ
+            </Text>
+          </View>
+        </View>
+      </View>
+    </View>
+  </View>
+</RCTScrollView>
+`;

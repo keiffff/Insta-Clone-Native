@@ -1,9 +1,6 @@
-import { getStorybookUI, configure } from '@storybook/react-native';
+import { getStorybookUI } from '@storybook/react-native';
+import './config';
 import './rn-addons';
-
-configure(() => {
-  require('./stories');
-}, module);
 
 export const Storybook = getStorybookUI({
   asyncStorage: require('@react-native-community/async-storage').default,
