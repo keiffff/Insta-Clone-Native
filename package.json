@@ -5,8 +5,8 @@
   "scripts": {
     "android": "react-native run-android",
     "ios": "react-native run-ios",
-    "start:app": "APP_TYPE=app react-native start",
-    "start:storybook": "yarn prestorybook && APP_TYPE=storybook react-native start",
+    "start:app": "APP_TYPE=app react-native start --reset-cache",
+    "start:storybook": "yarn prestorybook && APP_TYPE=storybook react-native start --reset-cache",
     "prestorybook": "rnstl",
     "test": "jest --colors --forceExit",
     "lint": "eslint 'src/**/*.{ts,tsx}' --fix",

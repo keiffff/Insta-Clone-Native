@@ -3,4 +3,4 @@ import { App } from './src/App';
 import { Storybook } from './storybook';
 import { name as appName } from './app.json';
 
-AppRegistry.registerComponent(appName, () => (process.env.APP_TYPE === 'app' ? App : Storybook));
+AppRegistry.registerComponent(appName, () => (process.env.APP_TYPE === 'storybook' ? Storybook : App));
