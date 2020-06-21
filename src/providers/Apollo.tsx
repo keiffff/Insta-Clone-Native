@@ -10,6 +10,7 @@ import { InMemoryCache, NormalizedCacheObject } from 'apollo-cache-inmemory';
 import AsyncStorage from '@react-native-community/async-storage';
 import { LoadingView } from 'components/LoadingView';
 import { gqlEndpoints } from 'constants/config';
+import { StorageKey } from 'constants/storage';
 
 type Props = {
   children: ReactNode;
@@ -80,7 +81,7 @@ export const ApolloProvider = ({ children }: Props) => {
   useEffect(() => {
     let cleanedUp = false;
     const initApollo = async () => {
-      const storageValue = await AsyncStorage.getItem('@token');
+      const storageValue = await AsyncStorage.getItem(StorageKey.accessToken);
       if (!cleanedUp) {
         setClient(makeApolloClient(storageValue ?? ''));
       }
